@@ -40,6 +40,9 @@ namespace DataStrctures.LinkedLists
             linkedList.Head=linkedList.InsertAtBeginning(linkedList.Head, 10);
             linkedList.Head = linkedList.InsertAtBeginning(linkedList.Head, 11);
             linkedList.Head = linkedList.InsertAtBeginning(linkedList.Head, 12);
+            linkedList.Head = linkedList.InsertAtBeginning(linkedList.Head, 10);
+            linkedList.Head = linkedList.InsertAtBeginning(linkedList.Head, 11);
+            linkedList.Head = linkedList.InsertAtBeginning(linkedList.Head, 12);
 
             linkedList.Head = linkedList.InsertInMiddle(linkedList.Head, 100, 6);
             linkedList.Head = linkedList.InsertAtEnd(linkedList.Head, 200);
