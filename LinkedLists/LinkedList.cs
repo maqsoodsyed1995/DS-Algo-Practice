@@ -125,6 +125,74 @@ namespace DataStrctures.LinkedLists
             return headNode;
         }
 
+        public Node DeleteFirst(Node headNode)
+        {
+            if (headNode == null)
+            {
+                return null;
+            }
+
+            headNode = headNode.Next;
+
+            return headNode;
+        }
+
+        public Node DeleteLast(Node headNode)
+        {
+            if (headNode == null)
+            {
+                return null;
+            }
+            Node tempNode = headNode;
+            Node lastToPreviousNode=headNode;
+            while (tempNode.Next != null)
+            {
+                lastToPreviousNode = tempNode;
+                tempNode = tempNode.Next;
+            }
+            lastToPreviousNode.Next = null;
+            return headNode;
+        }
+
+        public Node DeleteFromMiddle(Node headNode, int position)
+        {
+            if (headNode == null)
+            {
+                return null;
+            }
+
+            int listLength = ListLength(headNode);
+            if (position<1 && position > listLength)
+            {
+                Console.WriteLine("Invalid Position");
+            }
+
+            if (position == 1)
+            {
+                return DeleteFirst(headNode);
+            }
+
+            if (position == listLength)
+            {
+                return DeleteLast(headNode);
+            }
+
+            Node nodeToBeDeleted = headNode;
+            Node previousNode = headNode;
+            int count = 1;
+
+            while (count < position)
+            {
+                previousNode = nodeToBeDeleted;
+                nodeToBeDeleted = nodeToBeDeleted.Next;
+                count++;
+            }
+
+            previousNode.Next = nodeToBeDeleted.Next;
+
+            return headNode;
+        }
+
 
     }
 }

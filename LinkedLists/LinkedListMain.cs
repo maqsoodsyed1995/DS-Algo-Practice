@@ -46,9 +46,19 @@ namespace DataStrctures.LinkedLists
             linkedList.Head = linkedList.InsertAtBeginning(linkedList.Head, 10);
             linkedList.Head = linkedList.InsertAtBeginning(linkedList.Head, 11);
             linkedList.Head = linkedList.InsertAtBeginning(linkedList.Head, 12);
-
             linkedList.Head = linkedList.InsertInMiddle(linkedList.Head, 100, 6);
             linkedList.Head = linkedList.InsertAtEnd(linkedList.Head, 200);
+            linkedList.DisplayList(linkedList.Head);
+            linkedList.Head = linkedList.DeleteFirst(linkedList.Head);
+            linkedList.DisplayList(linkedList.Head);
+            linkedList.Head = linkedList.DeleteLast(linkedList.Head);
+            linkedList.Head = linkedList.DeleteLast(linkedList.Head);
+            linkedList.DisplayList(linkedList.Head);
+            linkedList.Head = linkedList.DeleteFromMiddle(linkedList.Head,3);
+            linkedList.DisplayList(linkedList.Head);
+            linkedList.Head = linkedList.DeleteFromMiddle(linkedList.Head, 2);
+            linkedList.DisplayList(linkedList.Head);
+            linkedList.Head = linkedList.DeleteFromMiddle(linkedList.Head, 6);
             linkedList.DisplayList(linkedList.Head);
         }
     }
